@@ -18,6 +18,7 @@
     - Filtered to Kentucky
 - US County Shapefiles
     - Filtered to Fayette County, Kentucky
+
 [OpenStreetMap](https://www.openstreetmap.org/about)
 
 * Initial Data projection: EPSG:4269 - NAD83
@@ -27,7 +28,7 @@
 
 ### Project Background
 
-If you are interested in [other DnD Mapping Softwares/Techniques](https://www.thegamer.com/dungeons-dragons-dnd-free-online-map-making-resources/)
+If you are interested in other [DnD Mapping Softwares/Techniques](https://www.thegamer.com/dungeons-dragons-dnd-free-online-map-making-resources/)
 
 ***
 
