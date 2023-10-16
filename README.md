@@ -1,12 +1,13 @@
 # Using OpenStreetMap Data to Create Dungeons and Dragons Maps
 
-
 ## Project Contents
 
-- [Data Source](#data-source)
+- [Data Sources](#data-sources)
 - [Project Background](#project-background)
 - [Purpose](#purpose)
-- ....
+- [Mapmaking Description](#mapmaking-description)
+- [Mapmaking Process](#mapmaking-process)
+- [Final Project Link](#final-project-link)
 
 ***
 
@@ -22,9 +23,13 @@
 * Initial Data projection: EPSG:4269 - NAD83
 * Final Map projection: EPSG:3089 - NAD83 / Kentucky Single Zone (ftUS)
 
+***
+
 ### Project Background
 
-If you are interested in [other Markdown formatting options](https://www.markdownguide.org/basic-syntax/)
+If you are interested in [other DnD Mapping Softwares/Techniques](https://www.thegamer.com/dungeons-dragons-dnd-free-online-map-making-resources/)
+
+***
 
 ### Purpose
 
@@ -36,6 +41,23 @@ Creating maps from scratch for DnD can also be long and arduous where it might t
 
 This lead to me getting the idea for this project.
 If I could turn Real World data into a fully fledged dnd map on the fly, then this tool could save many DMs valuable time and energy that could be spent on the shenanigans of their players.
+
+***
+
+### Mapmaking Description
+
+This map used a random point creation technique to create additional walls within buildings.
+When the building OSM data was initially imported and stylized in QGIS, most buildings were empty since they contained no internal data.
+To make these buildings less empty, I turned the outlines of their polygons into lines.
+Created an offset line that would be within the confines of the building.
+Turned that offset line into polygons.
+Generated points in said polygons.
+These would serve as anchor points for the ends of walls spanning from the original outline of a building to the newly created point.
+This was done by creating more random points on the outlines of the buildings, and then connecting the two through the Shortest Line Between Features tool.
+Note: I initially tried going from wall point to nearest random point, but this resulted in several wall points connecting to random points in other buildings.
+    The reverse of this created significantly less instances of this issue.
+
+***
 
 ### Mapmaking Process
 
@@ -61,6 +83,10 @@ If I could turn Real World data into a fully fledged dnd map on the fly, then th
 - Do this process twice, once for wall points and one for door points ![Doors](https://github.com/otu222/osm-dnd/blob/main/graphics/door_Settings.png?raw=true)
 11. Shortest Line Between Features ![SLBF](https://github.com/otu222/osm-dnd/blob/main/graphics/Shortest-Line-Between_Features_Settings.png?raw=true)
 12. Create a Hexagon Grid ![HexGrid](https://github.com/otu222/osm-dnd/blob/main/graphics/hexagon-grid_Settings.png?raw=true)
+13. Create a 5ft Grid and a 25ft Grid
+14. Style to your liking
+
+***
 
 ## Final Project Link
 
