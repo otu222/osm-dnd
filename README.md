@@ -52,15 +52,15 @@ If I could turn Real World data into a fully fledged dnd map on the fly, then th
     - highway
     - shop
 - Layer Extent: Fayette County Outline
-6. Processing Toolbox > Vector geometry > Polygons to Lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Polygons-to-Lines_Settings.png?raw=true)
-7. Processing Toolbox > Vector geometry > Offset lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Offset-Lines_Settings.png?raw=true)
-8. Processing Toolbox > Vector geometry > Lines to Polygons (https://github.com/otu222/osm-dnd/blob/main/graphics/Lines-to-Polygons_Settings.png?raw=true)
-9. Processing Toolbox > Vector creation > Random points inside polygons (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_Settings.png?raw=true)
-- Set Invalid Feature Filtering, by clicking the wrench icon. (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_IFF_Settings.png?raw=true)
-10. Processing Toolbox > Vector creation > Random points on lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-on-Lines_Settings-Wall-Points.png?raw=true)
-- Do this process twice, once for wall points and one for door points (https://github.com/otu222/osm-dnd/blob/main/graphics/door_Settings.png?raw=true)
-11. Shortest Line Between Features (https://github.com/otu222/osm-dnd/blob/main/graphics/Shortest-Line-Between_Features_Settings.png?raw=true)
-12. Create a Hexagon Grid (https://github.com/otu222/osm-dnd/blob/main/graphics/hexagon-grid_Settings.png?raw=true)
+6. Processing Toolbox > Vector geometry > Polygons to Lines ![PtoL](https://github.com/otu222/osm-dnd/blob/main/graphics/Polygons-to-Lines_Settings.png?raw=true)
+7. Processing Toolbox > Vector geometry > Offset lines ![Offset](https://github.com/otu222/osm-dnd/blob/main/graphics/Offset-Lines_Settings.png?raw=true)
+8. Processing Toolbox > Vector geometry > Lines to Polygons ![LtoP](https://github.com/otu222/osm-dnd/blob/main/graphics/Lines-to-Polygons_Settings.png?raw=true)
+9. Processing Toolbox > Vector creation > Random points inside polygons ![RPiP](https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_Settings.png?raw=true)
+- Set Invalid Feature Filtering, by clicking the wrench icon. ![IFF](https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_IFF_Settings.png?raw=true)
+10. Processing Toolbox > Vector creation > Random points on lines ![RPoL](https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-on-Lines_Settings-Wall-Points.png?raw=true)
+- Do this process twice, once for wall points and one for door points ![Doors](https://github.com/otu222/osm-dnd/blob/main/graphics/door_Settings.png?raw=true)
+11. Shortest Line Between Features ![SLBF](https://github.com/otu222/osm-dnd/blob/main/graphics/Shortest-Line-Between_Features_Settings.png?raw=true)
+12. Create a Hexagon Grid ![HexGrid](https://github.com/otu222/osm-dnd/blob/main/graphics/hexagon-grid_Settings.png?raw=true)
 
 ## Final Project Link
 
