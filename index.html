@@ -5,7 +5,7 @@
 <head>
 	<meta charset=utf-8 />
 	<!-- Below is the title of the document -->
-	<title>Template Example Edit</title>
+	<title>Using OpenStreetMap Data to Create D&D Maps</title>
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css" />
@@ -82,8 +82,6 @@
 		.max-width-img {
 			width: 100%;
 		}
-
-		/* Add custom style class here */
 	</style>
 </head>
 
@@ -92,23 +90,31 @@
 		<!-- The division element contains an image element -->
 		<div id='map'>
 			<!-- The image element uses the the 'src' property to show an image on the page. -->
-			<img src="images/thenameofyourfile.jpg" class="max-width-img" alt="This map displays the selected area of interest from OpenStreetMap">
+			<img src="osm-dnd\maps\DnD_Maps_300dpi.png" class="max-width-img" alt="This map displays the Lexington/Fayette County Area as a DnD Map at 3 scale sizes">
 		</div>
-		<!-- <a href="">Link to high resolution version</a> -->
+		<a href="https://github.com/otu222/osm-dnd/blob/main/maps/DnD_Maps_1200dpi.png">Link to high resolution version</a>
 
-		<!-- This is an HTML comment. Find the comments below and follow the instructions. -->
+		<h1>Using OpenStreetMap Data to Create D&D Maps</h1>
 
-		<h1>Title on page</h1>
-
-		<!-- Add your information below -->
-		<h2>Authored by: New Maps Plus</h2>
-		<p>Describe how this map was made, data sources, and other important metadata. Include link(s) to the data
-			source: <a href="https://nationalmap.gov/small_scale/atlasftp.html" target="blank">The National Map
-				Small-Scale website</a>. </p>
+		<h2>Authored by: Orest Tuz</h2>
+		<p>This map was created in QGIS v3.32.2</p>
+		<p>This map utilized US state and county data from <a href="https://www.naturalearthdata.com/">Natural Earth Data</a> for filtering what data would be imported through other tools.</p>
+		<p><a href="https://www.openstreetmap.org/about">OpenStreetMap</a> Data was collected through the QuickOSM v2.2.3 plugin for QGIS.</p>
+		<p>Of note, These keys below were used within the QuickOSM tool to gather the data represented in these maps:</p>
+		<ul>
+			<li>amenity</li>
+			<li>building</li>
+			<li>highway</li>
+			<li>shop</li>
+		</ul>
+		<p>These keys were set to a Layer extent of Fayette County in Lexington, KY</p>
+		<p>That layer was produced by filtering the Natural Earth US County shapefile to just Fayette County.</p>
+		<p>The projected coordinate system used was EPSG:3089 [NAD83 / Kentucky Single Zone (ftUS)]</p>
+		<p>The scaling for each section of the map varied and is listed underneath each section</p>
+		<p>From Left to Right: (1:500), (1:2500), (1:50000)</p>
 
 		<ul>
-			<!-- Change the following contacts to your personal brand, whatever you want it to be! -->
-			<li>See my projects on GitHub: <a href="https://github.com/newmapsplus">New Maps Plus</a></li>
+			<li>See my projects on GitHub: <a href="https://github.com/otu222">github.com/otu222</a></li>
 		</ul>
 		<hr>
 		<a href="https://uky-gis.github.io"><img width="20%"
