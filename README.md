@@ -1,27 +1,26 @@
-# osm-dnd
-
-
-
-# Project title
+# Using OpenStreetMap Data to Create Dungeons and Dragons Maps
 
 
 ## Project Contents
 
-If you wanted to include a table of contents to sections, and then links to each section.
-
-
 - [Data Source](#data-source)
 - [Project Background](#project-background)
+- [Purpose](#purpose)
 - ....
 
 ***
 
-### Data Source
+### Data Sources
 
-[Link to data source](https://...)
+[Natural Earth Data](https://www.naturalearthdata.com/)
+- US State Shapefiles
+    - Filtered to Kentucky
+- US County Shapefiles
+    - Filtered to Fayette County, Kentucky
+[OpenStreetMap](https://www.openstreetmap.org/about)
 
-* Initial Data projection: 
-* Final Map projection:
+* Initial Data projection: EPSG:4269 - NAD83
+* Final Map projection: EPSG:3089 - NAD83 / Kentucky Single Zone (ftUS)
 
 ### Project Background
 
@@ -29,20 +28,40 @@ If you are interested in [other Markdown formatting options](https://www.markdow
 
 ### Purpose
 
+Creating a Dungeons and Dragons (D&D/DnD) Campaign is difficult.
+One reason is the constant battle of creating maps that challenge the player's characters while keeping the layout of the map believable.
+Another issue is when a campaign book has a specified route for the players to take, but the players end up going in twenty different directions.
+This results in sessions where a Dungeon Master (DM) may have to search 20 mins for a map to use for the session while the pressure of 4 other people stacking dice ontop of each other makes the feeling urgent for an already stressed DM.
+Creating maps from scratch for DnD can also be long and arduous where it might take 10-15 mins just to create one house in a city.
+
+This lead to me getting the idea for this project.
+If I could turn Real World data into a fully fledged dnd map on the fly, then this tool could save many DMs valuable time and energy that could be spent on the shenanigans of their players.
+
 ### Mapmaking Process
 
-Example of in process map ![in process image](filepath)
-
-1. **Example bold**
-2. *Example italics*
-3. 
-4. 
-
-### Map summary
-
-Across the README.md file, please answer the who, what, when, where, why, and how of the map making process
-
+1. Set Project Projection to EPSG : 3089
+2. Import Natural Earth Data
+3. Filter US State Shapefiles to Kentucky
+- "STUSPS" = 'KY'
+4. Filter US County Shapefiles to Fayette County, Kentucky
+- "STUSPS" = 'KY' AND "NAMELSAD" = 'Fayette County'
+5. Pull OSM data using QuickOSM
+- Keys:
+    - amenity
+    - building
+    - highway
+    - shop
+- Layer Extent: Fayette County Outline
+6. Processing Toolbox > Vector geometry > Polygons to Lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Polygons-to-Lines_Settings.png?raw=true)
+7. Processing Toolbox > Vector geometry > Offset lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Offset-Lines_Settings.png?raw=true)
+8. Processing Toolbox > Vector geometry > Lines to Polygons (https://github.com/otu222/osm-dnd/blob/main/graphics/Lines-to-Polygons_Settings.png?raw=true)
+9. Processing Toolbox > Vector creation > Random points inside polygons (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_Settings.png?raw=true)
+- Set Invalid Feature Filtering, by clicking the wrench icon. (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-Inside-Polygons_IFF_Settings.png?raw=true)
+10. Processing Toolbox > Vector creation > Random points on lines (https://github.com/otu222/osm-dnd/blob/main/graphics/Random-Points-on-Lines_Settings-Wall-Points.png?raw=true)
+- Do this process twice, once for wall points and one for door points (https://github.com/otu222/osm-dnd/blob/main/graphics/door_Settings.png?raw=true)
+11. Shortest Line Between Features (https://github.com/otu222/osm-dnd/blob/main/graphics/Shortest-Line-Between_Features_Settings.png?raw=true)
+12. Create a Hexagon Grid (https://github.com/otu222/osm-dnd/blob/main/graphics/hexagon-grid_Settings.png?raw=true)
 
 ## Final Project Link
 
-Please view the [final map online](www.github...)
+Please view the [Final Project Page](https://otu222.github.io/osm-dnd/index.html)
